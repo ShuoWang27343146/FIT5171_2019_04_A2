@@ -1,0 +1,24 @@
+-------------------------------------------------------------------------------
+Test set: rockets.mining.RocketMinerUnitTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 2.603 s <<< FAILURE! - in rockets.mining.RocketMinerUnitTest
+testDominantCountry  Time elapsed: 1.24 s  <<< ERROR!
+java.lang.NullPointerException: The validated object is null
+	at rockets.mining.RocketMinerUnitTest.setUp(RocketMinerUnitTest.java:61)
+
+testHighestAveneuLaunchServiceProviders  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.NullPointerException: The validated object is null
+	at rockets.mining.RocketMinerUnitTest.setUp(RocketMinerUnitTest.java:61)
+
+testMostExpensiveLaunches  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.NullPointerException: The validated object is null
+	at rockets.mining.RocketMinerUnitTest.setUp(RocketMinerUnitTest.java:61)
+
+testMostReliableLaunchServiceProviders  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.NullPointerException: The validated object is null
+	at rockets.mining.RocketMinerUnitTest.setUp(RocketMinerUnitTest.java:61)
+
+testMostLaunchedRocket  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.NullPointerException: The validated object is null
+	at rockets.mining.RocketMinerUnitTest.setUp(RocketMinerUnitTest.java:61)
+

@@ -1,0 +1,9 @@
+rockets\model\LaunchUnitTest.class
+rockets\model\PayloadUnitTest.class
+rockets\model\UserUnitTest.class
+rockets\web\AppSystemTest.class
+rockets\model\LaunchServiceProviderUnitTest.class
+rockets\model\RocketFamilyUnitTest.class
+rockets\model\RocketUnitTest.class
+rockets\dataaccess\neo4j\Neo4jDAOUnitTest.class
+rockets\mining\RocketMinerUnitTest.class
