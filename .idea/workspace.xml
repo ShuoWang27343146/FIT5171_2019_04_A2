@@ -2,49 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="390c017e-671d-4819-a6e7-764767ddc0bc" name="Default Changelist" comment="completed code">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rockets/dataaccess/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rockets/dataaccess/DAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rockets/dataaccess/neo4j/Neo4jDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rockets/dataaccess/neo4j/Neo4jDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rockets/model/Payload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rockets/model/Payload.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rockets/model/Rocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rockets/model/Rocket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rockets/web/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rockets/web/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/app.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/create_rocket.html.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/create_rocket.html.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/rocket.html.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/rocket.html.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/rockets.html.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/rockets.html.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/user.html.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/user.html.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/users.html.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/users.html.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/rockets/dataaccess/neo4j/Neo4jDAOUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/rockets/dataaccess/neo4j/Neo4jDAOUnitTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/rockets/model/PayloadUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/rockets/model/PayloadUnitTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/rockets/web/AppSystemTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/rockets/web/AppSystemTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/rockets/dataaccess/DAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rockets/dataaccess/DAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/rockets/dataaccess/neo4j/Neo4jDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rockets/dataaccess/neo4j/Neo4jDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/rockets/model/Payload.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rockets/model/Payload.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/rockets/web/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rockets/web/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/jacoco.exec" beforeDir="false" afterPath="$PROJECT_DIR$/target/jacoco.exec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2019-05-23T21-53-03_848-jvmRun1.dump" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-rockets.dataaccess.neo4j.Neo4jDAOUnitTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-rockets.dataaccess.neo4j.Neo4jDAOUnitTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-rockets.mining.RocketMinerUnitTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-rockets.mining.RocketMinerUnitTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-rockets.model.LaunchServiceProviderUnitTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-rockets.model.LaunchServiceProviderUnitTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-rockets.model.LaunchUnitTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-rockets.model.LaunchUnitTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-rockets.model.PayloadUnitTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-rockets.model.PayloadUnitTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-rockets.model.RocketFamilyUnitTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-rockets.model.RocketFamilyUnitTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-rockets.model.RocketUnitTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-rockets.model.RocketUnitTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-rockets.model.UserUnitTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-rockets.model.UserUnitTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-rockets.web.AppSystemTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-rockets.web.AppSystemTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/rockets.dataaccess.neo4j.Neo4jDAOUnitTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/rockets.dataaccess.neo4j.Neo4jDAOUnitTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/rockets.mining.RocketMinerUnitTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/rockets.mining.RocketMinerUnitTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/rockets.model.LaunchUnitTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/rockets.model.LaunchUnitTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/rockets.model.PayloadUnitTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/rockets.model.PayloadUnitTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/rockets.model.RocketFamilyUnitTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/rockets.model.RocketFamilyUnitTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/rockets.model.RocketUnitTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/rockets.model.RocketUnitTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/rockets.model.UserUnitTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/rockets.model.UserUnitTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/rockets.web.AppSystemTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/rockets.web.AppSystemTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/rockets/dataaccess/neo4j/Neo4jDAOUnitTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/rockets/dataaccess/neo4j/Neo4jDAOUnitTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/rockets/model/PayloadUnitTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/rockets/model/PayloadUnitTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/rockets/web/AppSystemTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/rockets/web/AppSystemTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -91,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/rockets/model/LaunchServiceProvider.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="72" column="5" lean-forward="true" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
+            <state relative-caret-position="147">
+              <caret line="66" column="58" selection-start-line="66" selection-start-column="58" selection-end-line="66" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -139,11 +97,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/spark/template/freemarker/users.html.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+            <state relative-caret-position="412">
+              <caret line="23" column="29" lean-forward="true" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -175,6 +133,7 @@
       <find>user.html.ftl</find>
       <find>mission</find>
       <find>getLoggedInUser</find>
+      <find>com</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -190,7 +149,6 @@
         <option value="$PROJECT_DIR$/src/test/java/rockets/model/LaunchUnitTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/rockets/model/RocketUnitTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/rockets/model/UserUnitTest.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/rockets/mining/RocketMinerUnitTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/rockets/model/PayloadUnitTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/rockets/model/Payload.java" />
@@ -206,6 +164,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/user.html.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/rockets.html.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/users.html.ftl" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -425,7 +384,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558784883384" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558785220556" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.intellij.jarRepository.settings.RemoteRepositoriesConfigurable" />
   </component>
@@ -574,7 +533,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -583,7 +542,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3295082" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3295082" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.36885247" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -700,13 +659,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
@@ -1101,8 +1053,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/spark/template/freemarker/users.html.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+        <state relative-caret-position="412">
+          <caret line="23" column="29" lean-forward="true" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="66" column="58" selection-start-line="66" selection-start-column="58" selection-end-line="66" selection-end-column="58" />
         </state>
       </provider>
     </entry>
