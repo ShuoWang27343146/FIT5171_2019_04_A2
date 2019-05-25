@@ -105,11 +105,15 @@ public class AppSystemTest {
     }
 
     private ArrayList<LaunchServiceProvider> createLSPs() {
-        return Lists.newArrayList(
-                dao.createOrUpdate(new LaunchServiceProvider("ULA", 1990, "USA")),
-                dao.createOrUpdate(new LaunchServiceProvider("SpaceX", 2002, "USA")),
-                dao.createOrUpdate(new LaunchServiceProvider("ESA", 1975, "Europe "))
-        );
+        try {
+            return Lists.newArrayList(
+                    dao.createOrUpdate(new LaunchServiceProvider("ULA", 1990, "USA")),
+                    dao.createOrUpdate(new LaunchServiceProvider("SpaceX", 2002, "USA")),
+                    dao.createOrUpdate(new LaunchServiceProvider("ESA", 1975, "Europe "))
+            );
+        } catch (Exception e) {
+            return null;
+        }
     }
 
     @Test

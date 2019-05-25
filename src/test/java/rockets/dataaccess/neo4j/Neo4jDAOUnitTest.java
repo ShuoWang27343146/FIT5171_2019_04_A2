@@ -2,9 +2,6 @@ package rockets.dataaccess.neo4j;
 
 import com.google.common.collect.Sets;
 import org.junit.jupiter.api.*;
-import org.neo4j.graphdb.GraphDatabaseService;
-import org.neo4j.harness.ServerControls;
-import org.neo4j.harness.TestServerBuilders;
 import org.neo4j.ogm.config.Configuration;
 import org.neo4j.ogm.drivers.embedded.driver.EmbeddedDriver;
 import org.neo4j.ogm.session.Session;
@@ -36,12 +33,11 @@ public class Neo4jDAOUnitTest {
 
     @BeforeAll
     public void initializeNeo4j() {
-        ServerControls embeddedDatabaseServer = TestServerBuilders.newInProcessBuilder().newServer();
-        GraphDatabaseService dbService = embeddedDatabaseServer.graph();
-        EmbeddedDriver driver = new EmbeddedDriver(dbService);
+        EmbeddedDriver driver = createEmbeddedDriver(TEST_DB);
+
         sessionFactory = new SessionFactory(driver, User.class.getPackage().getName());
         session = sessionFactory.openSession();
-        dao = new Neo4jDAO(session);
+        dao = new Neo4jDAO(sessionFactory);
     }
 
     @BeforeEach

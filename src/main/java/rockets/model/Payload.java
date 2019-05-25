@@ -1,5 +1,7 @@
 package rockets.model;
 
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.Set;
 
 import static org.apache.commons.lang3.Validate.notNull;
@@ -15,12 +17,75 @@ public class Payload {
     private String description;
 
     public Payload(){
-        notNull(type);
-        PayloadValidation.NotZero(weight);
+        type="";
+        identity=new Set<String>() {
+            @Override
+            public int size() {
+                return 0;
+            }
 
-        this.type = type;
-        this.identity = identity;
-        this.weight = weight;
+            @Override
+            public boolean isEmpty() {
+                return false;
+            }
+
+            @Override
+            public boolean contains(Object o) {
+                return false;
+            }
+
+            @Override
+            public Iterator<String> iterator() {
+                return null;
+            }
+
+            @Override
+            public Object[] toArray() {
+                return new Object[0];
+            }
+
+            @Override
+            public <T> T[] toArray(T[] ts) {
+                return null;
+            }
+
+            @Override
+            public boolean add(String s) {
+                return false;
+            }
+
+            @Override
+            public boolean remove(Object o) {
+                return false;
+            }
+
+            @Override
+            public boolean containsAll(Collection<?> collection) {
+                return false;
+            }
+
+            @Override
+            public boolean addAll(Collection<? extends String> collection) {
+                return false;
+            }
+
+            @Override
+            public boolean retainAll(Collection<?> collection) {
+                return false;
+            }
+
+            @Override
+            public boolean removeAll(Collection<?> collection) {
+                return false;
+            }
+
+            @Override
+            public void clear() {
+
+            }
+        };
+        weight=0;
+        description="";
     }
 
     public String getType(){
@@ -48,11 +113,15 @@ public class Payload {
 
     public void setType(String type) {
         notNull(type);
+        if(type.trim().isEmpty())
+            throw new IllegalArgumentException("The validated object is null");
         this.type = type;
     }
 
     public void setDescription(String description) {
         notNull(description);
+        if(description.trim().isEmpty())
+            throw new IllegalArgumentException("The validated object is null");
         this.description = description;
     }
 

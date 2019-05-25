@@ -1,4 +1,5 @@
 rockets\model\PayloadValidation.class
+rockets\model\Payload$1.class
 rockets\model\Rocket.class
 rockets\model\LaunchServiceProvider.class
 rockets\model\Payload.class

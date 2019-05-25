@@ -14,6 +14,8 @@ public interface DAO {
 
     <T extends Entity> void delete(T entity);
 
+    <T extends Entity> T create(T entity) throws Exception;
+
     User getUserByEmail(String email);
 
     void close();

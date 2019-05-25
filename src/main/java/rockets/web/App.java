@@ -16,14 +16,14 @@ import spark.template.freemarker.FreeMarkerEngine;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
 import static org.apache.logging.log4j.core.util.Closer.closeSilently;
-import static spark.Spark.get;
-import static spark.Spark.port;
-import static spark.Spark.post;
+import static spark.Spark.*;
 
 public class App {
     private static Logger logger = LoggerFactory.getLogger(App.class);
@@ -127,10 +127,6 @@ public class App {
         }, new FreeMarkerEngine());
     }
 
-
-    /**
-     * TODO: a serious bug in this method. Fix it (and test to verify)!
-     */
     private static void handlePostRegister() {
         post("/register", (req, res) -> {
             Map<String, Object> attributes = new HashMap<>();
@@ -152,7 +148,7 @@ public class App {
                 user.setPassword(password);
                 user.setFirstName(firstName);
                 user.setLastName(lastName);
-                dao.createOrUpdate(user);
+                dao.create(user);
 
                 res.status(301);
                 req.session(true);
@@ -231,13 +227,13 @@ public class App {
     }
 
     private static ModelAndView handleException(Response res, Map<String, Object> attributes, Exception e, String templateName) {
-        res.status(500);
+        //res.status(500);
         if (e instanceof SQLException && null != e.getCause()) {
             attributes.put("errorMsg", e.getCause().getMessage());
         } else {
             attributes.put("errorMsg", e.getMessage());
         }
-        e.printStackTrace();
+       // e.printStackTrace();
         return new ModelAndView(attributes, templateName);
     }
 
@@ -273,14 +269,68 @@ public class App {
 
     // TODO: Need to TDD this
     private static void handleGetRocket() {
+        get("/rocket/:id", (req, res) -> {
+            Map<String, Object> attributes = new HashMap<>();
+            Rocket rocket;
+            //attributes.put("user", user);
+            try {
+                String id = req.params(":id");
+                rocket = dao.load(Rocket.class, Long.parseLong(id));
+                if (null != rocket) {
+                    attributes.put("rocket", rocket);
+                } else {
+                    attributes.put("errorMsg", "No rocket with the ID " + id + ".");
+                }
+                return new ModelAndView(attributes, "rocket.html.ftl");
+            } catch (Exception e) {
+                return handleException(res, attributes, e, "rockets.html.ftl");
+            }
+        }, new FreeMarkerEngine());
     }
 
     // TODO: Need to TDD this
     private static void handlePostCreateRocket() {
+        post("/rocket_create", (req, res) -> {
+            Map<String, Object> attributes = new HashMap<>();
+            String description = req.queryParams("description");
+            String location = req.queryParams("location");
+            String time = req.queryParams("time");
+            String missionName = req.queryParams("missionName");
+
+            attributes.put("description", description);
+            attributes.put("location", location);
+            attributes.put("time", time);
+            attributes.put("missionName", missionName);
+
+            Rocket rocket;
+            try {
+                rocket = new Rocket();
+               rocket.setWikilink(description);
+                rocket.setCountry(location);
+                rocket.setFirstYearFlight(Integer.parseInt(time.substring(0, 4)));
+                rocket.setName(missionName);
+                dao.createOrUpdate(rocket);
+
+                res.status(301);
+                req.session(true);
+                req.session().attribute("rocket", rocket);
+                res.redirect("/rockets");
+                return new ModelAndView(attributes, "rockets.html.ftl");
+            } catch (Exception e) {
+                return handleException(res, attributes, e, "create_rocket.html.ftl");
+            }
+        }, new FreeMarkerEngine());
     }
 
-    // TODO: Need to TDD this
     private static void handleGetCreateRocket() {
+        get("/rocket_create", (req, res) -> {
+            Map<String, Object> attributes = new HashMap<>();
+            attributes.put("description", "");
+            attributes.put("location", "");
+            attributes.put("time", new SimpleDateFormat("yyyy-M-d H:mm:ss").format(new Date()));
+            attributes.put("missionName", "");
+            return new ModelAndView(attributes, "create_rocket.html.ftl");
+        }, new FreeMarkerEngine());
     }
 
 
@@ -288,7 +338,7 @@ public class App {
         get("/rockets", (req, res) -> {
             Map<String, Object> attributes = new HashMap<>();
             try {
-                attributes.put("missions", dao.loadAll(Rocket.class));
+                attributes.put("rockets", dao.loadAll(Rocket.class));
                 return new ModelAndView(attributes, "rockets.html.ftl");
             } catch (Exception e) {
                 return handleException(res, attributes, e, "rockets.html.ftl");

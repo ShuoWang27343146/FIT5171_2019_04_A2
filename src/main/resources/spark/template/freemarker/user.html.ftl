@@ -31,6 +31,6 @@
     <p>You can <a href="/login">Login</a> or <a href="/register">register</a>.</p>
 </#if>
 </div>
-
+<a href="/users">Back</a>
 </body>
 </html>

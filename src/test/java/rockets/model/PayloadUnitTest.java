@@ -23,7 +23,7 @@ public class PayloadUnitTest {
     @Test
     public void shouldThrowExceptionToNull() {
         NullPointerException exception = assertThrows(NullPointerException.class, () -> payload.setType(null));
-        assertEquals("type cannot be null or empty", exception.getMessage());
+        assertEquals("The validated object is null", exception.getMessage());
     }
 
     @DisplayName("should throw exception when pass a empty string to setLaunchSite")
@@ -31,7 +31,7 @@ public class PayloadUnitTest {
     @ValueSource(strings = {"", " ", "  "})
     public void shouldThrowExceptionWhenSetLaunchSiteToEmpty(String type) {
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> payload.setType(type));
-        assertEquals("type cannot be null or empty", exception.getMessage());
+        assertEquals("The validated object is null", exception.getMessage());
     }
 
     @DisplayName("should throw exception when pass null to setDescription function")
@@ -39,7 +39,7 @@ public class PayloadUnitTest {
     public void shouldThrowDescriptionExceptionToNull() {
 
         NullPointerException exception = assertThrows(NullPointerException.class, () -> payload.setDescription(null));
-        assertEquals("description cannot be null", exception.getMessage());
+        assertEquals("The validated object is null", exception.getMessage());
     }
 
     @DisplayName("should throw exception when pass a empty string to setDescription")
@@ -47,7 +47,7 @@ public class PayloadUnitTest {
     @ValueSource(strings = {"", " ", "  "})
     public void shouldThrowExceptionWhenSetDescriptionoEmpty(String description) {
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> payload.setDescription(description));
-        assertEquals("description cannot be null", exception.getMessage());
+        assertEquals("The validated object is null", exception.getMessage());
     }
 
 

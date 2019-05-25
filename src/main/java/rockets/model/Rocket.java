@@ -24,6 +24,18 @@ public class Rocket extends Entity {
     @Property(name="country")
     private String country;
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public void setManufacturer(LaunchServiceProvider manufacturer) {
+        this.manufacturer = manufacturer;
+    }
+
     @Relationship(type = "MANUFACTURES", direction = INCOMING)
     private LaunchServiceProvider manufacturer;
 

@@ -33,10 +33,6 @@ public class Neo4jDAO implements DAO {
         }
     }
 
-    public Neo4jDAO(Session session) {
-        this.session = session;
-    }
-
     public Neo4jDAO(String dbAddress) {
         File file = new File(dbAddress);
         Configuration configuration = new Configuration.Builder()
@@ -57,7 +53,7 @@ public class Neo4jDAO implements DAO {
     }
 
     @Override
-    public <T extends Entity> T createOrUpdate(T entity) {
+    public <T extends Entity> T createOrUpdate(T entity)  {
         Class clazz = entity.getClass();
 
         T existingEntity = findExistingEntity(entity, clazz);
@@ -70,19 +66,37 @@ public class Neo4jDAO implements DAO {
         tx.commit();
         return entity;
     }
+    public <T extends Entity> T create(T entity) throws Exception {
+        Class clazz = entity.getClass();
 
+        T existingEntity = findExistingEntity(entity, clazz);
+        if (null != existingEntity) {
+            entity.setId(existingEntity.getId());
+            if (clazz.equals(User.class)) {
+                throw new Exception("User Exist");
+            }
+        }
+        Transaction tx = session.beginTransaction();
+        saveOutgoingEntities(entity, clazz);
+        session.save(entity);
+        tx.commit();
+        return entity;
+    }
     // Makes sure we save associated entities correctly (only once)
     private <T extends Entity> void saveOutgoingEntities(T entity, Class clazz) {
-        if (clazz.equals(Rocket.class)) {
-            Rocket rocket = (Rocket) entity;
-            for (Launch launch: rocket.getLaunches()) {
-                createOrUpdate(launch);
+        try {
+            if (clazz.equals(Rocket.class)) {
+                Rocket rocket = (Rocket) entity;
+                for (Launch launch : rocket.getLaunches()) {
+                    createOrUpdate(launch);
+                }
+            } else if (clazz.equals(LaunchServiceProvider.class)) {
+                LaunchServiceProvider lsp = (LaunchServiceProvider) entity;
+                for (Rocket rocket : lsp.getRockets()) {
+                    createOrUpdate(rocket);
+                }
             }
-        } else if (clazz.equals(LaunchServiceProvider.class)) {
-            LaunchServiceProvider lsp = (LaunchServiceProvider) entity;
-            for (Rocket rocket : lsp.getRockets()) {
-                createOrUpdate(rocket);
-            }
+        } catch (Exception e) {
         }
     }
 

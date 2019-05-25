@@ -24,10 +24,11 @@
         <#list users as user>
             <li><a href="/user/${user.id}">${user.firstName} ${user.lastName}</a></li>
         </#list>
-
+<a href="/">Back</a>
     </ul>
 <#else>
     <p>Nobody in the system. <a href="/register">Register</a> now!</p>
+    <a href="/">Back</a>
 </#if>
 
 </div>
